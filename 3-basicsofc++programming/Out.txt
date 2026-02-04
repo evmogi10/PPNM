@@ -1,4 +1,0 @@
-Hello, World!
-1
-666
-fgamma(1)=1
