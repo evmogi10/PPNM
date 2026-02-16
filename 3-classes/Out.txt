@@ -1,0 +1,59 @@
+Hello, World!
+1
+666
+Manual results
+      float eps=1.19209e-07
+     double eps=2.22045e-16
+long double eps=1.0842e-19
+Values of <limits> 
+1.19209e-07
+2.22045e-16
+1.0842e-19
+Theoretical verification
+pow(2,-23) [float]: 1.19209e-07
+pow(2,-52) [double]: 2.22045e-16
+a==b ? false
+a>1  ? false
+b>1  ? true
+       tiny=0.00000000000000011
+1+tiny+tiny=1.00000000000000000
+tiny+tiny+1=1.00000000000000022
+d1=0.79999999999999993
+d2=0.80000000000000004
+d1==d2? false
+approx(d1, d2) ? 1
+
+da==db
+for(size_t=0....) loop:
+1.00000000000000000 2.00000000000000000 3.00000000000000000 
+for(auto vi : v) loop:1.00000000000000000 2.00000000000000000 3.00000000000000000 
+for(double vi :v) loop:1.00000000000000000 2.00000000000000000 3.00000000000000000 
+
+is v changed after 'auto& vi' ?
+6.00000000000000000 6.00000000000000000 6.00000000000000000 
+ now comes the while loop:  v[0]=6.00000000000000000v[1]=6.00000000000000000v[2]=6.00000000000000000
+ now comes the do loop:  v[0]=6.00000000000000000v[1]=6.00000000000000000v[2]=6.00000000000000000
+--- Starting Vec Tests ---
+vec: parametrized constructor called...
+vec: parametrized constructor called...
+vec: destructor called...
+a + b = { 5.00000000000000000, 7.00000000000000000, 9.00000000000000000 } 
+a . b = 32.00000000000000000 (Expected 32)
+vec: parametrized constructor called...
+vec: parametrized constructor called...
+e1 x e2 = vec: parametrized constructor called...
+{ 0.00000000000000000, 0.00000000000000000, 1.00000000000000000 }  (Expected {0,0,1})
+vec: destructor called...
+vec: parametrized constructor called...
+vec: destructor called...
+Norm: 5.00000000000000000 (Expected 5)
+a * 2 = { 2.00000000000000000, 4.00000000000000000, 6.00000000000000000 } 
+vec: destructor called...
+vec: destructor called...
+
+All tests passed successfully.
+vec: destructor called...
+vec: destructor called...
+vec: destructor called...
+vec: destructor called...
+vec: destructor called...
