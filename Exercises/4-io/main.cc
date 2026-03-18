@@ -30,7 +30,6 @@ int main(){
 }
 */
 
-
 /* EXERCISE 3*/
 int main (int argc, char *argv[]) {
 	std::string infile="", outfile="";
@@ -55,4 +54,3 @@ myinput.close();
 myoutput.close();
 exit(EXIT_SUCCESS);
 }
-
