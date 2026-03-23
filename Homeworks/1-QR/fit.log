@@ -1,0 +1,182 @@
+
+
+*******************************************************************************
+Mon Mar 23 12:37:17 2026
+
+
+FIT:    data read from "out.times.data"
+        format = z
+BREAK: No data to fit
+
+*******************************************************************************
+Mon Mar 23 12:44:21 2026
+
+
+FIT:    data read from "out.times.data"
+        format = z
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 2.1606440000e+07   0.00e+00  1.38e+03    1.000000e+00
+   3 3.1382026992e+05  -9.16e-03  1.38e+00    1.642310e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 313820
+rel. change during last iteration : -9.15941e-08
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 144.642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 20921.4
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+k               = 0.164231         +/- 0.0262       (15.95%)
+
+
+*******************************************************************************
+Mon Mar 23 12:47:29 2026
+
+
+FIT:    data read from "out.times.data"
+        format = z
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 2.1606440000e+07   0.00e+00  1.38e+03    1.000000e+00
+   3 3.1382026992e+05  -9.16e-03  1.38e+00    1.642310e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 313820
+rel. change during last iteration : -9.15941e-08
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 144.642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 20921.4
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+k               = 0.164231         +/- 0.0262       (15.95%)
+
+
+*******************************************************************************
+Mon Mar 23 12:49:37 2026
+
+
+FIT:    data read from "out.times.data" using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Mon Mar 23 12:54:01 2026
+
+
+FIT:    data read from "out.times.data" using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Mon Mar 23 12:54:52 2026
+
+
+FIT:    data read from "out.times.data" using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Mon Mar 23 13:00:27 2026
+
+
+FIT:    data read from "out.times.data" using 1:2
+        format = x:z
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 1.3852858880e+16   0.00e+00  2.94e+07    1.000000e+00
+3015 7.1392485824e-321 -nan       2.94e-21   7.173691e-169
+
+After 301542 iterations the fit converged.
+final sum of squares of residuals : 7.13925e-321
+abs. change during last iteration : 0
+
+
+Hmmmm.... Sum of squared residuals is zero. Can't compute errors.
+
+Final set of parameters 
+======================= 
+
+k               = 7.17369e-169   
+
+
+*******************************************************************************
+Mon Mar 23 13:01:54 2026
+
+
+FIT:    data read from "out.times.data"
+        format = z
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 1.3852858880e+16   0.00e+00  2.94e+07    1.000000e+00
+3015 7.1392485824e-321 -nan       2.94e-21   7.173691e-169
+
+After 301542 iterations the fit converged.
+final sum of squares of residuals : 7.13925e-321
+abs. change during last iteration : 0
+
+
+Hmmmm.... Sum of squared residuals is zero. Can't compute errors.
+
+Final set of parameters 
+======================= 
+
+k               = 7.17369e-169   
+
+
+*******************************************************************************
+Mon Mar 23 13:07:15 2026
+
+
+FIT:    data read from "out.times.data"
+        format = z
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 1.3852858449e+16   0.00e+00  2.94e+07    1.000000e+00
+   5 5.7415490559e-03  -4.53e-11  2.94e+02    1.556473e-08
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00574155
+rel. change during last iteration : -4.53203e-16
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0195645
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00038277
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+k               = 1.55647e-08      +/- 1.662e-10    (1.068%)
