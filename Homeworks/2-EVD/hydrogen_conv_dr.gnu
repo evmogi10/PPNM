@@ -1,0 +1,13 @@
+set terminal svg background rgb "#ffffff"
+set output "hydrogen_conv_dr.svg"
+set xlabel "Step size (dr)"
+set ylabel "Ground State Energy (Hartrees)"
+set title "Energy Convergence (fixed rmax = 10)"
+set grid
+
+# Valor analítico esperado
+E_exact = -0.5
+
+plot \
+    "hydrogen_conv_dr.data" using 1:3 with linespoints pt 7 title "Calculated E0", \
+    E_exact with lines dt 2 lc rgb "red" title "Exact E0 = -0.5"

@@ -1,0 +1,46 @@
+
+
+*******************************************************************************
+Wed Mar 25 09:26:34 2026
+
+
+FIT:    data read from "jacobi_scaling.data"
+        format = z
+BREAK: No data to fit
+
+*******************************************************************************
+Wed Mar 25 09:54:08 2026
+
+
+FIT:    data read from "jacobi_scaling.data"
+        format = z
+BREAK: No data to fit
+
+*******************************************************************************
+Wed Mar 25 10:33:21 2026
+
+
+FIT:    data read from "jacobi_scaling.data"
+        format = z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 1.9505902616e+15   0.00e+00  1.33e+07    1.000000e+00
+   4 1.8988505630e+02  -4.86e-01  1.33e+03    9.377593e-07
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 189.885
+rel. change during last iteration : -4.86345e-06
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.35758
+variance of residuals (reduced chisquare) = WSSR/ndf   : 18.9885
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+k               = 9.37759e-07      +/- 9.866e-08    (10.52%)

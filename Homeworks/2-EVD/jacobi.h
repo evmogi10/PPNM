@@ -1,0 +1,65 @@
+#pragma once
+#include "matrix.h"
+#include <cmath>
+
+namespace pp {
+
+struct EVD {
+    pp::vector w; // Autovalores
+    pp::matrix V; // Autovectores
+
+    static void timesJ(pp::matrix& A, int p, int q, double theta) {
+        double c = std::cos(theta), s = std::sin(theta);
+        int n = A.size1(); // Tu método para el número de filas
+        for (int i = 0; i < n; i++) {
+            double aip = A(i, p), aiq = A(i, q);
+            A(i, p) = c * aip - s * aiq;
+            A(i, q) = s * aip + c * aiq;
+        }
+    }
+
+    static void Jtimes(pp::matrix& A, int p, int q, double theta) {
+        double c = std::cos(theta), s = std::sin(theta);
+        int n = A.size2(); // Tu método para el número de columnas
+        for (int j = 0; j < n; j++) {
+            double apj = A(p, j), aqj = A(q, j);
+            A(p, j) = c * apj + s * aqj;
+            A(q, j) = -s * apj + c * aqj;
+        }
+    }
+
+    // Constructor que hace todo el trabajo
+    EVD(pp::matrix A) : w(A.size1()), V(A.size1(), A.size2()) {
+        int n = A.size1();
+        V.setid(); // ¡Usamos tu método directamente!
+
+        bool changed;
+        do {
+            changed = false;
+            for (int p = 0; p < n - 1; p++) {
+                for (int q = p + 1; q < n; q++) {
+                    double apq = A(p, q), app = A(p, p), aqq = A(q, q);
+                    double theta = 0.5 * std::atan2(2 * apq, aqq - app);
+                    double c = std::cos(theta), s = std::sin(theta);
+                    
+                    double new_app = c * c * app - 2 * s * c * apq + s * s * aqq;
+                    double new_aqq = s * s * app + 2 * s * c * apq + c * c * aqq;
+                    
+                    if (new_app != app || new_aqq != aqq) {
+                        changed = true;
+                        timesJ(A, p, q, theta);
+                        Jtimes(A, p, q, -theta);
+                        timesJ(V, p, q, theta);
+                    }
+                }
+            }
+        } while (changed);
+
+        // Copiamos la diagonal a w usando tu operator[]
+        for (int i = 0; i < n; i++) {
+            w[i] = A(i, i); 
+        }
+    }
+};
+
+} // namespace pp

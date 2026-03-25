@@ -1,0 +1,45 @@
+CXXFLAGS += -std=c++20 -I. -Wall -Wextra -Werror
+LDLIBS += -lstdc++ -lm
+
+all: Out.txt hydrogen_wave.svg hydrogen_conv_dr.svg jacobi_scaling.svg
+
+Ns := $(shell seq 100 20 300)
+
+jacobi_scaling.data: main
+	for N in $(Ns); do \
+		/usr/bin/time -f "$$N %e" -o log.$$N ./main $$N > /dev/null & \
+	done; wait
+	>$@
+	for N in $(Ns); do cat log.$$N >> $@; done
+		$(RM) log.*
+
+jacobi_scaling.svg: jacobi_scaling.gnu jacobi_scaling.data
+	gnuplot $<
+
+hydrogen_wave.data: main
+	./$< -rmax 10 -dr 0.05 -wave > $@
+
+hydrogen_wave.svg: hydrogen_wave.gnu hydrogen_wave.data
+	gnuplot $<
+
+hydrogen_conv_dr.data: main
+	@> $@
+	for dr in 0.01 0.02 0.05 0.1 0.2 0.3 0.5 1.0; do \
+		./$< -rmax 10 -dr $$dr -energy >> $@ ; \
+	done
+
+hydrogen_conv_dr.svg: hydrogen_conv_dr.gnu hydrogen_conv_dr.data
+	gnuplot $<
+
+Out.txt: main
+	./$< > $@
+
+main: main.o matrix.o
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDLIBS)
+
+main.o: main.cc matrix.h jacobi.h
+matrix.o: matrix.cc matrix.h
+
+clean:
+	$(RM) main *.o *.data *.svg Out.txt
+
