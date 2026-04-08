@@ -44,3 +44,33 @@ variance of residuals (reduced chisquare) = WSSR/ndf   : 18.9885
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
 k               = 9.37759e-07      +/- 9.866e-08    (10.52%)
+
+
+*******************************************************************************
+Wed Apr  8 11:28:25 2026
+
+
+FIT:    data read from "jacobi_scaling.data"
+        format = z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = k * x**3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   k            
+   0 1.9505912904e+15   0.00e+00  1.33e+07    1.000000e+00
+   5 2.6927383008e+01  -2.64e-11  1.33e+02    6.740632e-07
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 26.9274
+rel. change during last iteration : -2.63874e-16
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.64096
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.69274
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+k               = 6.74063e-07      +/- 3.715e-08    (5.512%)
