@@ -1,0 +1,7 @@
+--- Rutherford & Soddy ThX (224Ra) Decay Fit ---
+Best fit c0 (ln(a)): 4.95866 +/- 0.0354019
+Best fit c1 (-lambda): -0.170624 +/- 0.00715662
+
+Calculated Half-Life: 4.06242 +/- 0.170394 days
+Modern Half-Life (224Ra): 3.6319 days
+Conclusion: The modern value is slightly outside our estimated uncertainty.

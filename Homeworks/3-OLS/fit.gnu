@@ -1,0 +1,14 @@
+set terminal svg background rgb "white" size 800,600
+set output "decay_fit.svg"
+set title "Radioactive Decay of ThX (224Ra) - Rutherford & Soddy 1902"
+set xlabel "Time (days)"
+set ylabel "Activity (Relative Units)"
+set grid
+set key top right
+
+plot "data.txt" using 1:2:3 with yerrorbars lc rgb "black" pt 7 ps 1 title "Exp. Data with uncertainties", \
+     "fit_curves.txt" using 1:2 with lines lc rgb "red" lw 2 title "Best Fit (y = a*e^{-λt})", \
+     "fit_curves.txt" using 1:3 with lines lc rgb "gray" dt 2 title "c_0+δc_0, c_1+δc_1", \
+     "fit_curves.txt" using 1:4 with lines lc rgb "gray" dt 2 title "c_0-δc_0, c_1-δc_1", \
+     "fit_curves.txt" using 1:5 with lines lc rgb "gray" dt 2 title "c_0+δc_0, c_1-δc_1", \
+     "fit_curves.txt" using 1:6 with lines lc rgb "gray" dt 2 title "c_0-δc_0, c_1+δc_1"
