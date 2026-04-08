@@ -1,0 +1,5 @@
+--- Debugging Quadratic Splines ---
+Test y=1   -> qs1(2.5) = 1 (Expected 1)
+Test y=x   -> qs2(2.5) = 2.5 (Expected 2.5)
+Test y=x^2 -> qs3(2.5) = 6.25 (Expected 6.25)
+
