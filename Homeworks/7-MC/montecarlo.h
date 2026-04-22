@@ -115,6 +115,7 @@ MCResult stratmc(F f, std::vector<double> a, std::vector<double> b, int N, RNG& 
     if (nmin == 0) nmin = 10 * dim;
 
     if (N < nmin) {
+	if (N<=0) N = 1;
         return plainmc(f, a, b, N, random_double);
     }
 
