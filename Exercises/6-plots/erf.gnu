@@ -1,3 +1,4 @@
+# Hold on Gemini 3
 set terminal svg background rgb "#ffffff"
 set output "erf.svg"
 set xlabel "x"

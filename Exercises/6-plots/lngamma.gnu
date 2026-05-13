@@ -1,3 +1,4 @@
+# Hold on Gemini 3
 set terminal svg background rgb "#ffffff"
 set output "lngamma.svg"
 set xlabel "x"
