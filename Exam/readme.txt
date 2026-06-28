@@ -43,4 +43,4 @@ PART B (3 pts)
 - Theoretically analyzed the structural limitations of the Jacobi eigenvalue algorithm, definitively proving why it cannot be tuned to take advantage of tridiagonal forms due to the geometric "fill-in" effect.
 
 PART C (1 pt)
-- Added comprehensive extra components, including Full Gram-Schmidt Reorthogonalization, the Wilkinson W21+ benchmark test, and empirical mathematical validation of the O(d*N*n + N*n^2) computational time complexity.
+- Added extra components, including Full Gram-Schmidt Reorthogonalization, the Wilkinson W21+ benchmark test, and empirical mathematical validation of the O(d*N*n + N*n^2) computational time complexity.
