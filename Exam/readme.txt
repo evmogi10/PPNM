@@ -9,7 +9,7 @@ The following explanation is based on the book as well as the Wikipedia page pro
 --------------------------------------------------------------------------------
 This project implements the Lanczos Tridiagonalization algorithm for real symmetric matrices. The algorithm is an adaptation of power methods used to find extreme eigenvalues. It reduces the original N x N matrix into a much smaller n x n tridiagonal matrix T, acting as a lossy compression scheme that preserves extreme eigenvalues. 
 
-To test its effectiveness, I calculated the ground state energy of the radial Schrödinger equation for a discretized Hydrogen atom. Because the pure Lanczos algorithm suffers from numerical instability due to a loss of orthogonality (which generates "spurious" or ghost eigenvalues), I implemented Full Gram-Schmidt Reorthogonalization (the "purification" method introduced by Ojalvo and Newman) inside the main loop to guarantee the stability of the Krylov subspace.
+To test its effectiveness, I calculated the ground state energy of the radial Schrödinger equation for a discretized Hydrogen atom. Because the pure Lanczos algorithm suffers from numerical instability due to a loss of orthogonality (which generates ghost eigenvalues), I implemented Full Gram-Schmidt Reorthogonalization (the "purification" method introduced by Ojalvo and Newman) inside the main loop to guarantee the stability of the Krylov subspace.
 
 
 2. ANALYSIS OF EMPIRICAL RESULTS (CONVERGENCE & EFFICIENCY)
