@@ -2,7 +2,7 @@
 EXAMINATION ASSIGNMENT: LANCZOS TRIDIAGONALIZATION ALGORITHM
 ================================================================================
 
-The following explanation is based on the book as well as the Wikipedia page provided.
+The following explanation is based on the book as well as the Wikipedia page provided. Furthermore, Gemini was used to assist with the implementation and code generation, which I then reviewed, adapted, and tested.
 
 
 1. PROJECT DESCRIPTION & IMPLEMENTATION DETAILS
